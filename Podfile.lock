@@ -1,0 +1,14 @@
+PODS:
+  - WCDB (1.0.6):
+    - WCDB/sqlcipher (= 1.0.6)
+  - WCDB/sqlcipher (1.0.6)
+
+DEPENDENCIES:
+  - WCDB
+
+SPEC CHECKSUMS:
+  WCDB: 4d2926bf695b2e00d785b50afd32c2dcc8cbbd98
+
+PODFILE CHECKSUM: d1e096e7a95f847017a184b7472f7b7a932e982e
+
+COCOAPODS: 1.4.0

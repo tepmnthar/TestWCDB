@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "SQL.h"
+#import "Student.h"
 
 @interface AppDelegate ()
 
