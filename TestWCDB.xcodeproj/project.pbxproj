@@ -20,6 +20,11 @@
 		AF6CAECD204FCBAB00A9C09D /* Student+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAECC204FCBAB00A9C09D /* Student+WCTTableCoding.mm */; };
 		AF6CAECF204FDCBB00A9C09D /* CRUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAECE204FDCBB00A9C09D /* CRUDTests.m */; };
 		AF6CAED3204FE1BF00A9C09D /* ParallelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAED2204FE1BF00A9C09D /* ParallelTests.m */; };
+		AF6CAF0620500FBC00A9C09D /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0520500FBC00A9C09D /* Teacher.m */; };
+		AF6CAF0920500FC800A9C09D /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0820500FC800A9C09D /* Room.m */; };
+		AF6CAF0C2050104D00A9C09D /* Teacher+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0B2050104D00A9C09D /* Teacher+WCTTableCoding.mm */; };
+		AF6CAF0F2050106E00A9C09D /* Room+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */; };
+		AFAC0AE520511A7700BECC09 /* CascadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAC0AE420511A7700BECC09 /* CascadeTests.m */; };
 		B660D61F0142A36F5F28D717 /* libPods-TestWCDBTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 527627E7D4F9ABA43317D2B9 /* libPods-TestWCDBTests.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,15 @@
 		AF6CAECC204FCBAB00A9C09D /* Student+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Student+WCTTableCoding.mm"; sourceTree = "<group>"; };
 		AF6CAECE204FDCBB00A9C09D /* CRUDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRUDTests.m; sourceTree = "<group>"; };
 		AF6CAED2204FE1BF00A9C09D /* ParallelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallelTests.m; sourceTree = "<group>"; };
+		AF6CAF0420500FBC00A9C09D /* Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		AF6CAF0520500FBC00A9C09D /* Teacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
+		AF6CAF0720500FC800A9C09D /* Room.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		AF6CAF0820500FC800A9C09D /* Room.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		AF6CAF0A2050104D00A9C09D /* Teacher+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Teacher+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AF6CAF0B2050104D00A9C09D /* Teacher+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Teacher+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		AF6CAF0D2050106E00A9C09D /* Room+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Room+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Room+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		AFAC0AE420511A7700BECC09 /* CascadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CascadeTests.m; sourceTree = "<group>"; };
 		C1E3BE6512AE36F3A8DA2AB6 /* libPods-TestWCDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestWCDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5001C1ADDA371D8DC8423E /* Pods-TestWCDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWCDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestWCDB/Pods-TestWCDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +150,7 @@
 		AF6CAEB8204FB64E00A9C09D /* TestWCDBTests */ = {
 			isa = PBXGroup;
 			children = (
+				AFAC0AE420511A7700BECC09 /* CascadeTests.m */,
 				AF6CAED2204FE1BF00A9C09D /* ParallelTests.m */,
 				AF6CAECE204FDCBB00A9C09D /* CRUDTests.m */,
 				AF6CAEB9204FB64E00A9C09D /* TestWCDBTests.m */,
@@ -151,6 +166,14 @@
 				AF6CAEC6204FBCB100A9C09D /* Student.m */,
 				AF6CAECB204FCBAB00A9C09D /* Student+WCTTableCoding.h */,
 				AF6CAECC204FCBAB00A9C09D /* Student+WCTTableCoding.mm */,
+				AF6CAF0420500FBC00A9C09D /* Teacher.h */,
+				AF6CAF0520500FBC00A9C09D /* Teacher.m */,
+				AF6CAF0A2050104D00A9C09D /* Teacher+WCTTableCoding.h */,
+				AF6CAF0B2050104D00A9C09D /* Teacher+WCTTableCoding.mm */,
+				AF6CAF0720500FC800A9C09D /* Room.h */,
+				AF6CAF0820500FC800A9C09D /* Room.m */,
+				AF6CAF0D2050106E00A9C09D /* Room+WCTTableCoding.h */,
+				AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,10 +395,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6CAEA5204FB64E00A9C09D /* ViewController.m in Sources */,
+				AF6CAF0620500FBC00A9C09D /* Teacher.m in Sources */,
 				AF6CAECD204FCBAB00A9C09D /* Student+WCTTableCoding.mm in Sources */,
 				AF6CAEB0204FB64E00A9C09D /* main.m in Sources */,
 				AF6CAEA2204FB64E00A9C09D /* AppDelegate.m in Sources */,
+				AF6CAF0C2050104D00A9C09D /* Teacher+WCTTableCoding.mm in Sources */,
 				AF6CAECA204FBEB800A9C09D /* SQL.mm in Sources */,
+				AF6CAF0920500FC800A9C09D /* Room.m in Sources */,
+				AF6CAF0F2050106E00A9C09D /* Room+WCTTableCoding.mm in Sources */,
 				AF6CAEC7204FBCB100A9C09D /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAC0AE520511A7700BECC09 /* CascadeTests.m in Sources */,
 				AF6CAED3204FE1BF00A9C09D /* ParallelTests.m in Sources */,
 				AF6CAEBA204FB64E00A9C09D /* TestWCDBTests.m in Sources */,
 				AF6CAECF204FDCBB00A9C09D /* CRUDTests.m in Sources */,

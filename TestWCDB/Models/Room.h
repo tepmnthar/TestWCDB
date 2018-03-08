@@ -1,5 +1,5 @@
 //
-//  Student.h
+//  Room.h
 //  TestWCDB
 //
 //  Created by tepmnthar on 07/03/2018.
@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Student : NSObject
+@interface Room : NSObject
+
 @property (nonatomic) NSInteger ID;
-@property (nonatomic) NSString* name;
-@property (nonatomic) NSInteger teacherID;
+@property (nonatomic) NSString* address;
+
 @end

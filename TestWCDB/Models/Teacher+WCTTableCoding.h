@@ -1,18 +1,18 @@
 //
-//  Student+WCTTableCoding.h
+//  Teacher+WCTTableCoding.h
 //  TestWCDB
 //
 //  Created by tepmnthar on 07/03/2018.
 //  Copyright © 2018 tepmnthar. All rights reserved.
 //
 
-#import "Student.h"
+#import "Teacher.h"
 #import <WCDB/WCDB.h>
 
-@interface Student (WCTTableCoding) <WCTTableCoding>
+@interface Teacher (WCTTableCoding) <WCTTableCoding>
 
 WCDB_PROPERTY(ID)
 WCDB_PROPERTY(name)
-WCDB_PROPERTY(teacherID)
+WCDB_PROPERTY(subject)
 
 @end

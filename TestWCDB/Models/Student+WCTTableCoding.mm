@@ -14,6 +14,7 @@ WCDB_IMPLEMENTATION(Student)
 
 WCDB_SYNTHESIZE(Student, ID)
 WCDB_SYNTHESIZE(Student, name)
+WCDB_SYNTHESIZE(Student, teacherID)
 
 WCDB_PRIMARY(Student, ID)
 
