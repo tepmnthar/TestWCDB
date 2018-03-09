@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		75485BFFDBEAAB20410E3FC0 /* libPods-TestWCDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E3BE6512AE36F3A8DA2AB6 /* libPods-TestWCDB.a */; };
+		AF35588E205247BA0089BCE2 /* EncryptTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AF35588D205247BA0089BCE2 /* EncryptTest.m */; };
+		AF35589120526A8E0089BCE2 /* AddFieldTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AF35589020526A8E0089BCE2 /* AddFieldTable.m */; };
+		AF35589420526AA90089BCE2 /* ChangeFieldTypeTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AF35589320526AA90089BCE2 /* ChangeFieldTypeTable.m */; };
+		AF35589720526B270089BCE2 /* SeparateTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AF35589620526B270089BCE2 /* SeparateTable.m */; };
+		AF35589A20526B370089BCE2 /* AddIndexTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AF35589920526B370089BCE2 /* AddIndexTable.m */; };
+		AF35589D2052738C0089BCE2 /* AddFieldTableM.m in Sources */ = {isa = PBXBuildFile; fileRef = AF35589C2052738C0089BCE2 /* AddFieldTableM.m */; };
+		AF3558A0205274900089BCE2 /* AddFieldTable+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF35589F205274900089BCE2 /* AddFieldTable+WCTTableCoding.mm */; };
+		AF3558A3205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF3558A2205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.mm */; };
+		AF3558A520527CF40089BCE2 /* UpgradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3558A420527CF40089BCE2 /* UpgradeTests.m */; };
 		AF6CAEA2204FB64E00A9C09D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAEA1204FB64E00A9C09D /* AppDelegate.m */; };
 		AF6CAEA5204FB64E00A9C09D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAEA4204FB64E00A9C09D /* ViewController.m */; };
 		AF6CAEA8204FB64E00A9C09D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6CAEA6204FB64E00A9C09D /* Main.storyboard */; };
@@ -25,6 +34,7 @@
 		AF6CAF0C2050104D00A9C09D /* Teacher+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0B2050104D00A9C09D /* Teacher+WCTTableCoding.mm */; };
 		AF6CAF0F2050106E00A9C09D /* Room+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */; };
 		AFAC0AE520511A7700BECC09 /* CascadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAC0AE420511A7700BECC09 /* CascadeTests.m */; };
+		AFC1F5F12052304F00A8BC7C /* TransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC1F5F02052304F00A8BC7C /* TransactionTests.m */; };
 		B660D61F0142A36F5F28D717 /* libPods-TestWCDBTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 527627E7D4F9ABA43317D2B9 /* libPods-TestWCDBTests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +53,22 @@
 		52D2D73AF48D281A08CF5A89 /* Pods-TestWCDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWCDBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestWCDBTests/Pods-TestWCDBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		703FB1D225E0B12FC53FF21D /* Pods-TestWCDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWCDBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestWCDBTests/Pods-TestWCDBTests.release.xcconfig"; sourceTree = "<group>"; };
 		70A973070687474EF9CAE24C /* Pods-TestWCDB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWCDB.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestWCDB/Pods-TestWCDB.release.xcconfig"; sourceTree = "<group>"; };
+		AF35588D205247BA0089BCE2 /* EncryptTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncryptTest.m; sourceTree = "<group>"; };
+		AF35588F20526A8E0089BCE2 /* AddFieldTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFieldTable.h; sourceTree = "<group>"; };
+		AF35589020526A8E0089BCE2 /* AddFieldTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFieldTable.m; sourceTree = "<group>"; };
+		AF35589220526AA90089BCE2 /* ChangeFieldTypeTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeFieldTypeTable.h; sourceTree = "<group>"; };
+		AF35589320526AA90089BCE2 /* ChangeFieldTypeTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeFieldTypeTable.m; sourceTree = "<group>"; };
+		AF35589520526B270089BCE2 /* SeparateTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeparateTable.h; sourceTree = "<group>"; };
+		AF35589620526B270089BCE2 /* SeparateTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeparateTable.m; sourceTree = "<group>"; };
+		AF35589820526B370089BCE2 /* AddIndexTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddIndexTable.h; sourceTree = "<group>"; };
+		AF35589920526B370089BCE2 /* AddIndexTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddIndexTable.m; sourceTree = "<group>"; };
+		AF35589B2052738C0089BCE2 /* AddFieldTableM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFieldTableM.h; sourceTree = "<group>"; };
+		AF35589C2052738C0089BCE2 /* AddFieldTableM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFieldTableM.m; sourceTree = "<group>"; };
+		AF35589E205274900089BCE2 /* AddFieldTable+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddFieldTable+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AF35589F205274900089BCE2 /* AddFieldTable+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "AddFieldTable+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		AF3558A1205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddFieldTableM+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AF3558A2205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "AddFieldTableM+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		AF3558A420527CF40089BCE2 /* UpgradeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpgradeTests.m; sourceTree = "<group>"; };
 		AF6CAE9D204FB64E00A9C09D /* TestWCDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWCDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6CAEA0204FB64E00A9C09D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF6CAEA1204FB64E00A9C09D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +99,7 @@
 		AF6CAF0D2050106E00A9C09D /* Room+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Room+WCTTableCoding.h"; sourceTree = "<group>"; };
 		AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Room+WCTTableCoding.mm"; sourceTree = "<group>"; };
 		AFAC0AE420511A7700BECC09 /* CascadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CascadeTests.m; sourceTree = "<group>"; };
+		AFC1F5F02052304F00A8BC7C /* TransactionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionTests.m; sourceTree = "<group>"; };
 		C1E3BE6512AE36F3A8DA2AB6 /* libPods-TestWCDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestWCDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5001C1ADDA371D8DC8423E /* Pods-TestWCDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWCDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestWCDB/Pods-TestWCDB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +177,9 @@
 		AF6CAEB8204FB64E00A9C09D /* TestWCDBTests */ = {
 			isa = PBXGroup;
 			children = (
+				AF3558A420527CF40089BCE2 /* UpgradeTests.m */,
+				AF35588D205247BA0089BCE2 /* EncryptTest.m */,
+				AFC1F5F02052304F00A8BC7C /* TransactionTests.m */,
 				AFAC0AE420511A7700BECC09 /* CascadeTests.m */,
 				AF6CAED2204FE1BF00A9C09D /* ParallelTests.m */,
 				AF6CAECE204FDCBB00A9C09D /* CRUDTests.m */,
@@ -174,6 +204,20 @@
 				AF6CAF0820500FC800A9C09D /* Room.m */,
 				AF6CAF0D2050106E00A9C09D /* Room+WCTTableCoding.h */,
 				AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */,
+				AF35588F20526A8E0089BCE2 /* AddFieldTable.h */,
+				AF35589020526A8E0089BCE2 /* AddFieldTable.m */,
+				AF35589E205274900089BCE2 /* AddFieldTable+WCTTableCoding.h */,
+				AF35589F205274900089BCE2 /* AddFieldTable+WCTTableCoding.mm */,
+				AF35589B2052738C0089BCE2 /* AddFieldTableM.h */,
+				AF35589C2052738C0089BCE2 /* AddFieldTableM.m */,
+				AF3558A1205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.h */,
+				AF3558A2205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.mm */,
+				AF35589220526AA90089BCE2 /* ChangeFieldTypeTable.h */,
+				AF35589320526AA90089BCE2 /* ChangeFieldTypeTable.m */,
+				AF35589520526B270089BCE2 /* SeparateTable.h */,
+				AF35589620526B270089BCE2 /* SeparateTable.m */,
+				AF35589820526B370089BCE2 /* AddIndexTable.h */,
+				AF35589920526B370089BCE2 /* AddIndexTable.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,12 +439,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6CAEA5204FB64E00A9C09D /* ViewController.m in Sources */,
+				AF35589420526AA90089BCE2 /* ChangeFieldTypeTable.m in Sources */,
 				AF6CAF0620500FBC00A9C09D /* Teacher.m in Sources */,
+				AF3558A0205274900089BCE2 /* AddFieldTable+WCTTableCoding.mm in Sources */,
+				AF3558A3205274A50089BCE2 /* AddFieldTableM+WCTTableCoding.mm in Sources */,
 				AF6CAECD204FCBAB00A9C09D /* Student+WCTTableCoding.mm in Sources */,
 				AF6CAEB0204FB64E00A9C09D /* main.m in Sources */,
 				AF6CAEA2204FB64E00A9C09D /* AppDelegate.m in Sources */,
 				AF6CAF0C2050104D00A9C09D /* Teacher+WCTTableCoding.mm in Sources */,
+				AF35589720526B270089BCE2 /* SeparateTable.m in Sources */,
 				AF6CAECA204FBEB800A9C09D /* SQL.mm in Sources */,
+				AF35589D2052738C0089BCE2 /* AddFieldTableM.m in Sources */,
+				AF35589A20526B370089BCE2 /* AddIndexTable.m in Sources */,
+				AF35589120526A8E0089BCE2 /* AddFieldTable.m in Sources */,
 				AF6CAF0920500FC800A9C09D /* Room.m in Sources */,
 				AF6CAF0F2050106E00A9C09D /* Room+WCTTableCoding.mm in Sources */,
 				AF6CAEC7204FBCB100A9C09D /* Student.m in Sources */,
@@ -411,8 +462,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3558A520527CF40089BCE2 /* UpgradeTests.m in Sources */,
 				AFAC0AE520511A7700BECC09 /* CascadeTests.m in Sources */,
+				AFC1F5F12052304F00A8BC7C /* TransactionTests.m in Sources */,
 				AF6CAED3204FE1BF00A9C09D /* ParallelTests.m in Sources */,
+				AF35588E205247BA0089BCE2 /* EncryptTest.m in Sources */,
 				AF6CAEBA204FB64E00A9C09D /* TestWCDBTests.m in Sources */,
 				AF6CAECF204FDCBB00A9C09D /* CRUDTests.m in Sources */,
 			);

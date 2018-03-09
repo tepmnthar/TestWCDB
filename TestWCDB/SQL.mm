@@ -11,6 +11,8 @@
 #import "Student+WCTTableCoding.h"
 #import "Teacher+WCTTableCoding.h"
 #import "Room+WCTTableCoding.h"
+#import "AddFieldTable+WCTTableCoding.h"
+#import "AddFieldTableM+WCTTableCoding.h"
 
 static NSString* const DB_PATH = @"/main.db";
 
@@ -22,6 +24,9 @@ static NSString* const DB_PATH = @"/main.db";
         NSString* documentPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0];
         NSString* fullPath = [documentPath stringByAppendingPathComponent:DB_PATH];
         staticDatabase = [[WCTDatabase alloc] initWithPath:fullPath];
+        [staticDatabase close:^{
+            [staticDatabase removeFilesWithError:nil];
+        }];
     });
     return staticDatabase;
 }
@@ -39,6 +44,16 @@ static NSString* const DB_PATH = @"/main.db";
     BOOL flag = [self.database insertObject:student into:@"student"];
     return flag;
 }
++ (BOOL)transactionCreateStudent:(Student *)student {
+    [self.database beginTransaction];
+    BOOL flag = [self.database insertObject:student into:@"student"];
+    if (flag) {
+        [self.database commitTransaction];
+    } else {
+        [self.database rollbackTransaction];
+    }
+    return flag;
+}
 + (NSArray<Student *>*)retreiveStudents {
     NSArray<Student *>* students = [self.database getObjectsOfClass:Student.class
                                                           fromTable:@"student"
@@ -49,6 +64,18 @@ static NSString* const DB_PATH = @"/main.db";
     Student* ret = [self.database getObjectsOfClass:Student.class
                                               fromTable:@"student"
                                                   where:Student.ID == student.ID].firstObject;
+    return ret;
+}
++ (Student *)transactionRetreiveStudent:(Student *)student {
+    [self.database beginTransaction];
+    Student* ret = [self.database getObjectsOfClass:Student.class
+                                          fromTable:@"student"
+                                              where:Student.ID == student.ID].firstObject;
+    if (ret) {
+        [self.database commitTransaction];
+    } else {
+        [self.database rollbackTransaction];
+    }
     return ret;
 }
 + (BOOL)updateStudent:(Student *)student {
@@ -111,6 +138,38 @@ static NSString* const DB_PATH = @"/main.db";
     while ((multiObject = [multiSelect nextMultiObject])) {
         Student* student = (Student*)[multiObject objectForKey:@"student"];
         Teacher* teacher = (Teacher*)[multiObject objectForKey:@"teacher"];
+    }
+}
++ (void)encryptSQL {
+    NSData *key = [@"password" dataUsingEncoding:NSASCIIStringEncoding];
+    [self.database setCipherKey:key];
+}
++ (void)testUpgradeAddField {
+    [self.database dropTableOfName:@"AddFieldTable"];
+    [self.database createTableAndIndexesOfName:@"AddFieldTable"
+                                     withClass:AddFieldTable.class];
+    for (int i = 0; i < 100; i++) {
+        AddFieldTable* addFieldObject = [[AddFieldTable alloc] init];
+        addFieldObject.ID = i;
+        addFieldObject.first = i * 1;
+        [self.database insertObject:addFieldObject
+                               into:@"AddFieldTable"];
+    }
+    {
+        NSArray* array = [self.database getAllObjectsOfClass:AddFieldTable.class
+                                                   fromTable:@"AddFieldTable"];
+        NSLog(@"before: %@", array);
+    }
+    // 升级了
+    [self.database createTableAndIndexesOfName:@"AddFieldTable"
+                                     withClass:AddFieldTableM.class];
+    [self.database updateAllRowsInTable:@"AddFieldTable"
+                             onProperty:AddFieldTableM.second
+                              withValue:@(100)];
+    {
+    NSArray* array = [self.database getAllObjectsOfClass:AddFieldTableM.class
+                                               fromTable:@"AddFieldTable"];
+        NSLog(@"after: %@", array);
     }
 }
 @end

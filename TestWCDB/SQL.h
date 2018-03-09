@@ -15,10 +15,13 @@
 + (BOOL)deleteAllStudents;
 + (BOOL)createStudentTable;
 + (BOOL)createStudent:(Student*)student;
++ (BOOL)transactionCreateStudent:(Student*)student;
 + (BOOL)updateStudent:(Student*)student;
 + (NSArray<Student *>*)retreiveStudents;
 + (Student*)retreiveStudent:(Student*)student;
++ (Student*)transactionRetreiveStudent:(Student*)student;
 + (BOOL)deleteStudent:(Student*)student;
+
 
 + (BOOL)deleteAllTeacher;
 + (BOOL)createTeacherTable;
@@ -29,5 +32,9 @@
 + (BOOL)createRoom:(Room*)room;
 
 + (void)multiSelectWithTeacher:(Teacher*)teacher;
+
++ (void)encryptSQL;
+
++ (void)testUpgradeAddField;
 
 @end

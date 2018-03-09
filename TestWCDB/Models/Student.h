@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Teacher.h"
 @interface Student : NSObject
 @property (nonatomic) NSInteger ID;
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSInteger teacherID;
+
+@property (nonatomic) Teacher* teacher;
 @end

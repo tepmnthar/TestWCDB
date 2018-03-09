@@ -1,19 +1,19 @@
 //
-//  ParallelTests.m
+//  TransactionTests.m
 //  TestWCDBTests
 //
-//  Created by tepmnthar on 07/03/2018.
+//  Created by tepmnthar on 09/03/2018.
 //  Copyright © 2018 tepmnthar. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 #import "SQL.h"
 
-@interface ParallelTests : XCTestCase
+@interface TransactionTests : XCTestCase
 
 @end
 
-@implementation ParallelTests
+@implementation TransactionTests
 
 - (void)setUp {
     [super setUp];
@@ -24,7 +24,21 @@
     }
 }
 
-- (void)testReadWrite {
+- (void)tearDown {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+- (void)testTransaction {
+    for (int i = 0; i < 100; i++) {
+        Student* student = [[Student alloc] init];
+        student.ID = i;
+        student.name = [NSString stringWithFormat:@"%d", i];
+        [SQL transactionCreateStudent:student];
+    }
+    XCTAssertTrue([SQL retreiveStudents].count == 100);
+}
+- (void)testTransactionMultithreadReadWrite {
     void(^anonymous)(void) = ^{
         dispatch_queue_t q1 = dispatch_queue_create("q1", NULL);
         dispatch_queue_t q2 = dispatch_queue_create("q2", NULL);
@@ -33,7 +47,7 @@
                 Student* student = [[Student alloc] init];
                 student.ID = i;
                 student.name = [NSString stringWithFormat:@"%d", i];
-                [SQL createStudent:student];
+                [SQL transactionCreateStudent:student];
                 NSLog(@"insert: %d", i);
             }
         });
@@ -41,7 +55,7 @@
             for (int i = 99999; i >= 0; i--) {
                 Student* student = [[Student alloc] init];
                 student.ID = i;
-                Student* findStudent = [SQL retreiveStudent:student];
+                Student* findStudent = [SQL transactionRetreiveStudent:student];
                 if (findStudent) {
                     NSLog(@"hit: %d", i);
                 } else {
@@ -52,8 +66,7 @@
     };
     XCTAssertNoThrow(anonymous());
 }
-
-- (void)testReadWriteAnother {
+- (void)testTransactionMultithreadReadWriteAnother {
     void(^anonymous)(void) = ^{
         dispatch_queue_t q1 = dispatch_queue_create("q1", NULL);
         dispatch_queue_t q2 = dispatch_queue_create("q2", NULL);
@@ -62,7 +75,7 @@
                 Student* student = [[Student alloc] init];
                 student.ID = i;
                 student.name = [NSString stringWithFormat:@"%d", i];
-                [SQL createStudent:student];
+                [SQL transactionCreateStudent:student];
                 NSLog(@"insert: %d", i);
             });
             
@@ -71,7 +84,7 @@
             dispatch_async(q2, ^{
                 Student* student = [[Student alloc] init];
                 student.ID = i;
-                Student* findStudent = [SQL retreiveStudent:student];
+                Student* findStudent = [SQL transactionRetreiveStudent:student];
                 if (findStudent) {
                     NSLog(@"hit: %d", i);
                 } else {
