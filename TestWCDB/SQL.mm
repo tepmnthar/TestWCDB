@@ -13,6 +13,8 @@
 #import "Room+WCTTableCoding.h"
 #import "AddFieldTable+WCTTableCoding.h"
 #import "AddFieldTableM+WCTTableCoding.h"
+#import "AddIndexTable+WCTTableCoding.h"
+#import "AddIndexTableM+WCTTableCoding.h"
 
 static NSString* const DB_PATH = @"/main.db";
 
@@ -24,9 +26,9 @@ static NSString* const DB_PATH = @"/main.db";
         NSString* documentPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0];
         NSString* fullPath = [documentPath stringByAppendingPathComponent:DB_PATH];
         staticDatabase = [[WCTDatabase alloc] initWithPath:fullPath];
-        [staticDatabase close:^{
-            [staticDatabase removeFilesWithError:nil];
-        }];
+//        [staticDatabase close:^{
+//            [staticDatabase removeFilesWithError:nil];
+//        }];
     });
     return staticDatabase;
 }
@@ -172,4 +174,30 @@ static NSString* const DB_PATH = @"/main.db";
         NSLog(@"after: %@", array);
     }
 }
++ (void)testUpgradeAddIndex {
+    [self.database dropTableOfName:@"AddIndexTable"];
+    [self.database createTableAndIndexesOfName:@"AddIndexTable"
+                                     withClass:AddIndexTable.class];
+    for (int i = 0; i < 100; i++) {
+        AddIndexTable* addIndexObject = [[AddIndexTable alloc] init];
+        addIndexObject.ID = i;
+        addIndexObject.first = i * 1;
+        [self.database insertObject:addIndexObject
+                               into:@"AddIndexTable"];
+    }
+    {
+        NSArray* array = [self.database getAllObjectsOfClass:AddIndexTable.class
+                                                   fromTable:@"AddIndexTable"];
+        NSLog(@"before: %@", array);
+    }
+    // 升级了
+    [self.database createTableAndIndexesOfName:@"AddIndexTable"
+                                     withClass:AddIndexTableM.class];
+    {
+        NSArray* array = [self.database getAllObjectsOfClass:AddIndexTableM.class
+                                                   fromTable:@"AddIndexTable"];
+        NSLog(@"after: %@", array);
+    }
+}
+
 @end

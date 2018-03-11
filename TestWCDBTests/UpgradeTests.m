@@ -29,4 +29,8 @@
     [SQL testUpgradeAddField];
 }
 
+- (void)testAddIndex {
+    [SQL testUpgradeAddIndex];
+}
+
 @end

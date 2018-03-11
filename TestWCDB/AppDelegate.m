@@ -18,37 +18,41 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    {
-//        [SQL createStudentTable];
-//        [SQL deleteAllStudents];
-//    }
-//    void(^anonymous)(void) = ^{
-//        dispatch_queue_t q1 = dispatch_queue_create("q1", NULL);
-//        dispatch_queue_t q2 = dispatch_queue_create("q2", NULL);
-//        for (int i = 0; i < 100000; i++) {
-//            dispatch_async(q1, ^{
-//                Student* student = [[Student alloc] init];
-//                student.ID = i;
-//                student.name = [NSString stringWithFormat:@"%d", i];
-//                [SQL transactionCreateStudent:student];
-//                NSLog(@"insert: %d", i);
-//            });
-//            
-//        }
-//        for (int i = 99999; i >= 0; i--) {
-//            dispatch_async(q2, ^{
-//                Student* student = [[Student alloc] init];
-//                student.ID = i;
-//                Student* findStudent = [SQL transactionRetreiveStudent:student];
-//                if (findStudent) {
-//                    NSLog(@"hit: %d", i);
-//                } else {
-//                    NSLog(@"miss: %d", i);
-//                }
-//            });
-//        }
-//    };
-//    anonymous();
+    {
+        [SQL createStudentTable];
+        [SQL deleteAllStudents];
+    }
+    void(^anonymous)(void) = ^{
+        dispatch_queue_t q1 = dispatch_queue_create("q1", NULL);
+        dispatch_queue_t q2 = dispatch_queue_create("q2", NULL);
+            dispatch_async(q1, ^{
+                for (int i = 0; i < 100000; i++) {
+
+                Student* student = [[Student alloc] init];
+                student.ID = i;
+                student.name = [NSString stringWithFormat:@"%d", i];
+                [SQL transactionCreateStudent:student];
+                NSLog(@"insert: %d", i);
+                }
+
+            });
+            
+            dispatch_async(q2, ^{
+                for (int i = 99999; i >= 0; i--) {
+
+                Student* student = [[Student alloc] init];
+                student.ID = i;
+                Student* findStudent = [SQL transactionRetreiveStudent:student];
+                if (findStudent) {
+                    NSLog(@"hit: %d", i);
+                } else {
+                    NSLog(@"miss: %d", i);
+                }
+                }
+
+            });
+    };
+    anonymous();
     
     return YES;
 }

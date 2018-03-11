@@ -34,6 +34,9 @@
 		AF6CAF0C2050104D00A9C09D /* Teacher+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0B2050104D00A9C09D /* Teacher+WCTTableCoding.mm */; };
 		AF6CAF0F2050106E00A9C09D /* Room+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */; };
 		AFAC0AE520511A7700BECC09 /* CascadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAC0AE420511A7700BECC09 /* CascadeTests.m */; };
+		AFB9899F205523F100EEE5FC /* AddIndexTable+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFB9899E205523F100EEE5FC /* AddIndexTable+WCTTableCoding.mm */; };
+		AFB989A2205524C700EEE5FC /* AddIndexTableM.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB989A1205524C700EEE5FC /* AddIndexTableM.m */; };
+		AFB989A5205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = AFB989A4205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.mm */; };
 		AFC1F5F12052304F00A8BC7C /* TransactionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC1F5F02052304F00A8BC7C /* TransactionTests.m */; };
 		B660D61F0142A36F5F28D717 /* libPods-TestWCDBTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 527627E7D4F9ABA43317D2B9 /* libPods-TestWCDBTests.a */; };
 /* End PBXBuildFile section */
@@ -99,6 +102,12 @@
 		AF6CAF0D2050106E00A9C09D /* Room+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Room+WCTTableCoding.h"; sourceTree = "<group>"; };
 		AF6CAF0E2050106E00A9C09D /* Room+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Room+WCTTableCoding.mm"; sourceTree = "<group>"; };
 		AFAC0AE420511A7700BECC09 /* CascadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CascadeTests.m; sourceTree = "<group>"; };
+		AFB9899D205523F100EEE5FC /* AddIndexTable+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddIndexTable+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AFB9899E205523F100EEE5FC /* AddIndexTable+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "AddIndexTable+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		AFB989A0205524C700EEE5FC /* AddIndexTableM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddIndexTableM.h; sourceTree = "<group>"; };
+		AFB989A1205524C700EEE5FC /* AddIndexTableM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddIndexTableM.m; sourceTree = "<group>"; };
+		AFB989A3205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddIndexTableM+WCTTableCoding.h"; sourceTree = "<group>"; };
+		AFB989A4205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "AddIndexTableM+WCTTableCoding.mm"; sourceTree = "<group>"; };
 		AFC1F5F02052304F00A8BC7C /* TransactionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionTests.m; sourceTree = "<group>"; };
 		C1E3BE6512AE36F3A8DA2AB6 /* libPods-TestWCDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestWCDB.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5001C1ADDA371D8DC8423E /* Pods-TestWCDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWCDB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestWCDB/Pods-TestWCDB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +227,12 @@
 				AF35589620526B270089BCE2 /* SeparateTable.m */,
 				AF35589820526B370089BCE2 /* AddIndexTable.h */,
 				AF35589920526B370089BCE2 /* AddIndexTable.m */,
+				AFB9899D205523F100EEE5FC /* AddIndexTable+WCTTableCoding.h */,
+				AFB9899E205523F100EEE5FC /* AddIndexTable+WCTTableCoding.mm */,
+				AFB989A0205524C700EEE5FC /* AddIndexTableM.h */,
+				AFB989A1205524C700EEE5FC /* AddIndexTableM.m */,
+				AFB989A3205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.h */,
+				AFB989A4205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.mm */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -447,12 +462,15 @@
 				AF6CAEB0204FB64E00A9C09D /* main.m in Sources */,
 				AF6CAEA2204FB64E00A9C09D /* AppDelegate.m in Sources */,
 				AF6CAF0C2050104D00A9C09D /* Teacher+WCTTableCoding.mm in Sources */,
+				AFB989A5205524DB00EEE5FC /* AddIndexTableM+WCTTableCoding.mm in Sources */,
 				AF35589720526B270089BCE2 /* SeparateTable.m in Sources */,
 				AF6CAECA204FBEB800A9C09D /* SQL.mm in Sources */,
 				AF35589D2052738C0089BCE2 /* AddFieldTableM.m in Sources */,
+				AFB989A2205524C700EEE5FC /* AddIndexTableM.m in Sources */,
 				AF35589A20526B370089BCE2 /* AddIndexTable.m in Sources */,
 				AF35589120526A8E0089BCE2 /* AddFieldTable.m in Sources */,
 				AF6CAF0920500FC800A9C09D /* Room.m in Sources */,
+				AFB9899F205523F100EEE5FC /* AddIndexTable+WCTTableCoding.mm in Sources */,
 				AF6CAF0F2050106E00A9C09D /* Room+WCTTableCoding.mm in Sources */,
 				AF6CAEC7204FBCB100A9C09D /* Student.m in Sources */,
 			);
@@ -612,10 +630,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 662J8SU7P8;
+				DEVELOPMENT_TEAM = QQKLUKUV8P;
 				INFOPLIST_FILE = TestWCDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tepmnthar.TestWCDB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Benqumark.TestWCDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -627,10 +645,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 662J8SU7P8;
+				DEVELOPMENT_TEAM = QQKLUKUV8P;
 				INFOPLIST_FILE = TestWCDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tepmnthar.TestWCDB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Benqumark.TestWCDB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -642,7 +660,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 662J8SU7P8;
+				DEVELOPMENT_TEAM = QQKLUKUV8P;
 				INFOPLIST_FILE = TestWCDBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tepmnthar.TestWCDBTests;
@@ -658,7 +676,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 662J8SU7P8;
+				DEVELOPMENT_TEAM = QQKLUKUV8P;
 				INFOPLIST_FILE = TestWCDBTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tepmnthar.TestWCDBTests;

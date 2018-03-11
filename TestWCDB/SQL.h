@@ -36,5 +36,6 @@
 + (void)encryptSQL;
 
 + (void)testUpgradeAddField;
++ (void)testUpgradeAddIndex;
 
 @end
